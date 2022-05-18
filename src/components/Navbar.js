@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import SLJackson from "../assets/SLJ.jpg"
 import Imagens from '../webpages/Imagens'
-import "./NavbarStyle.css"
+import Sorvetes from '../webpages/Sorvetes'
+import Automoveis from '../webpages/Automoveis'
+import "./Navbar.css"
 
 // Essa Navbar é a minha obra prima............................ até agora
 export default function Navbar () {
@@ -41,10 +44,25 @@ export default function Navbar () {
 											<li>
 												<Link activeStyle={activestyle} to="/imagens">
 													<i className='bx bx-user-pin'/>
-													<span className="link-name">Login</span>
+													<span className="link-name">Imagens</span>
 												</Link>
-												<span className="tooltip">Login</span>
+												<span className="tooltip">Imagens</span>
+											</li>
 
+											<li>
+												<Link activeStyle={activestyle} to="/sorvetes">
+													<i className='bx bx-user-pin'/>
+													<span className="link-name">Lista de Sorvetes</span>
+												</Link>
+												<span className="tooltip">Lista de Sorvetes</span>
+											</li>
+
+											<li>
+												<Link activeStyle={activestyle} to="/automoveis">
+													<i className='bx bx-user-pin'/>
+													<span className="link-name">Automóveis</span>
+												</Link>
+												<span className="tooltip">Automóveis</span>
 											</li>
 
                     </ul>
@@ -52,10 +70,10 @@ export default function Navbar () {
                     <div className="profile-content">
                         <div className="profile">
                             <div className="profile-details">
-                                <img  alt="#"/>
+                                <img src={ SLJackson } alt="#"/>
                                 <div className="name-box">
-                                    <div className="name">Pedro Souza</div>
-                                    <div className="job">Bad Motherfucker</div>
+                                    <div className="name">Bad Motherfucker</div>
+                                    <div className="job">@_pedromend</div>
                                 </div>
                             </div>
                             <i className='bx bx-log-out' id="log-out"></i>
@@ -66,6 +84,8 @@ export default function Navbar () {
 
 							<Routes>
 								<Route path="/imagens" element={<Imagens/>}/>
+								<Route path="/sorvetes" element={<Sorvetes/>}/>
+								<Route path="/automoveis" element={<Automoveis/>}/>
 							</Routes>
 
 

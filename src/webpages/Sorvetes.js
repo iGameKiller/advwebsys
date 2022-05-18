@@ -1,12 +1,31 @@
-import "./Home.css"
+//import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import './Sorvetes.css'
 
-function Sorvetes() {
-  return (
+export default function Sorvetes(){
 
-		<body>
-			<div className='text'>Sorvetes</div>
-		</body>
-  );
+	function mostreSabor(e){
+		alert(e.target.innerHTML)
+	}
+		return(
+			<body>
+				<h3 className='page-title'>Lista de Sorvetes</h3>
+
+				<div class="dropdown">
+					<button class="dropbtn">Escolha seu sabor de Sorvete</button>
+					<div class="dropdown-content">
+						<button data-tip = "Manga" onClick={e => mostreSabor(e)} href="#">Manga</button>
+						<button data-tip = "Côco" onClick={e => mostreSabor(e)} href="#">Côco</button>
+						<button data-tip = "Uva" onClick={e => mostreSabor(e)} href="#">Uva</button>
+						<button data-tip = "Morango" onClick={e => mostreSabor(e)} href="#">Morango</button>
+						<button data-tip = "Manga" onClick={e => mostreSabor(e)} href="#">Leite Condensado</button>
+					</div>
+				</div>
+				<button className="btn-enviar">Enviar</button>
+				<p>Uma página com uma lista no estilo dropdown com tipos de frutas para o usuário
+				selecionar. <br/> A página também conterá um botão que, ao ser clicado, mostrará um
+				alerta informando a fruta <br/> selecionada e um input de texto que servirá para inserção
+				de novas frutas à lista;</p>
+			</body>
+		);
+
 }
-
-export default Sorvetes;
