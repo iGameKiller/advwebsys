@@ -1,5 +1,5 @@
-import ImgManager from '../components/ImgManager.js'
-import "./Home.css"
+import ImgManager from '../../components/ImgManager.js'
+import "../styles/Imagens.css"
 
 function Imagens() {
   return (

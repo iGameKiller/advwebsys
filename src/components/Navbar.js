@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import SLJackson from "../assets/SLJ.jpg"
-import Imagens from '../webpages/Imagens'
-import Sorvetes from '../webpages/Sorvetes'
-import Automoveis from '../webpages/Automoveis'
+import Imagens from '../webpages/main/Imagens'
+import Sorvetes from '../webpages/main/Sorvetes'
+import Automoveis from '../webpages/main/Automoveis'
 import "./Navbar.css"
 
 // Essa Navbar é a minha obra prima............................ até agora
@@ -63,6 +63,22 @@ export default function Navbar () {
 													<span className="link-name">Automóveis</span>
 												</Link>
 												<span className="tooltip">Automóveis</span>
+											</li>
+
+											<li>
+												<Link activeStyle={activestyle} to="/automoveis">
+													<i className='bx bx-user-pin'/>
+													<span className="link-name">Listagem</span>
+												</Link>
+												<span className="tooltip">Listagem</span>
+											</li>
+
+											<li>
+												<Link activeStyle={activestyle} to="/automoveis">
+													<i className='bx bx-user-pin'/>
+													<span className="link-name">Autores</span>
+												</Link>
+												<span className="tooltip">Autores</span>
 											</li>
 
                     </ul>

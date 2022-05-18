@@ -1,5 +1,5 @@
 //import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
-import './Sorvetes.css'
+import '../styles/Sorvetes.css'
 
 export default function Sorvetes(){
 
@@ -7,9 +7,7 @@ export default function Sorvetes(){
 		alert(e.target.innerHTML)
 	}
 		return(
-			<body>
-				<h3 className='page-title'>Lista de Sorvetes</h3>
-
+			<body className="div">
 				<div class="dropdown">
 					<button class="dropbtn">Escolha seu sabor de Sorvete</button>
 					<div class="dropdown-content">
@@ -20,6 +18,7 @@ export default function Sorvetes(){
 						<button data-tip = "Manga" onClick={e => mostreSabor(e)} href="#">Leite Condensado</button>
 					</div>
 				</div>
+				<input type="text" placeholder="Type some shit"/>
 				<button className="btn-enviar">Enviar</button>
 				<p>Uma página com uma lista no estilo dropdown com tipos de frutas para o usuário
 				selecionar. <br/> A página também conterá um botão que, ao ser clicado, mostrará um
