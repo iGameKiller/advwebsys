@@ -1,4 +1,27 @@
+
 body{
-	margin-top:30px;
+  position: absolute;
+  margin:0;
+  height: 100%;
+  width: calc(100% - 60px);
+  left: 60px;
+  transition: all 0.5s ease;
+  margin-top: 40px;
 }
 
+body .text{
+	font-size: 25px;
+	font-weight: 500;
+	color:#1d1b31;
+	margin: 12px;
+}
+
+.sidebar.active ~ body{
+  width: calc(100% - 240px);
+  left: 240px;
+}
+
+.paragraph{
+	padding-left:130px;
+	padding-right:170px;
+}
