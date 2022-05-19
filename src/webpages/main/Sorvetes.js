@@ -9,19 +9,37 @@ export default class Sorvetes extends Component{
 			defaultMsg: 'Escolha seu sabor de Sorvete',
 		}
 	}
+
 	mostreSabor = e => {
 		//TODO: programar troca de cor dps, uma por fruta
 		this.setState({defaultMsg: e.target.innerHTML})
 	}
 	enviar = () => {
 		alert(this.state.defaultMsg)
+
+		let buttonsDisplay = document.getElementById('sabores');
+
+		let child = document.createElement('button')
+		child.innerHTML = "<button>"+this.state.defaultMsg+"</button>"
+
+		buttonsDisplay.append(child)
+		this.setState({ input: 0 });
+		return child;
+
 	}
+
+	handleChange = (e) => {
+		this.setState({defaultMsg: e.target.value})
+		let input = document.getElementById("saborselecionado")
+
+	}
+
 	render(){
 		return(
 			<body>
 				<div class="dropdown">
 					<button class="dropbtn">{ this.state.defaultMsg }</button>
-					<div class="dropdown-content">
+					<div class="dropdown-content" id="sabores">
 						<button data-tip = "Manga" onClick={e => this.mostreSabor(e)} href="#">Manga</button>
 						<button data-tip = "Côco" onClick={e => this.mostreSabor(e)} href="#">Côco</button>
 						<button data-tip = "Uva" onClick={e => this.mostreSabor(e)} href="#">Uva</button>
@@ -29,7 +47,7 @@ export default class Sorvetes extends Component{
 						<button data-tip = "Manga" onClick={e => this.mostreSabor(e)} href="#">Leite Condensado</button>
 					</div>
 				</div>
-				<input type="text" placeholder="Type some shit"/>
+				<input id="saborselecionado" type="text" className="input-fruta" onChange={e => this.handleChange(e)} placeholder="Digite uma fruta nova"></input>
 				<button className="btn-enviar" onClick={this.enviar}>Enviar</button>
 				<p>Uma página com uma lista no estilo dropdown com tipos de frutas para o usuário
 				selecionar. <br/> A página também conterá um botão que, ao ser clicado, mostrará um

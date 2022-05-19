@@ -83,4 +83,11 @@
 	background-color: gray;
 	transition: all 0.5s ease;
 }
-
+ .input-fruta{
+	margin-left:10px;
+	border-radius: 10px;
+	width: 200px;
+	height: 30px;
+	padding-left: 15px;
+	font-size:15px;
+ }
